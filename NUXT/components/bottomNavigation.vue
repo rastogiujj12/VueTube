@@ -18,14 +18,14 @@
         <span v-text="item.name" />
         <v-icon
           :color="
-            tabSelection == i
+            $nuxt.$route.path == item.link
               ? 'primary'
               : $vuetify.theme.dark
               ? 'background lighten-4'
               : 'background darken-4'
           "
           :class="
-            tabSelection == i
+            $nuxt.$route.path == item.link
               ? $vuetify.theme.dark
                 ? 'tab primary darken-4'
                 : 'tab primary lighten-4'
